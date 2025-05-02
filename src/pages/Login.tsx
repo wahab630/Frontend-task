@@ -67,7 +67,13 @@ const Login = () => {
               <div className="space-y-2">
                 <div>
                   <label htmlFor="username" className="input-label">Username</label>
-                  <input type="text" name="username" id="username" value={formik.values.username} onChange={formik.handleChange} onBlur={formik.handleBlur}
+                  <input
+                    id="username"
+                    type="text"
+                    name="username"
+                    value={formik.values.username}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                     className="input-field" />
                   {formik.errors.username && formik.touched.username && (
                     <span className="error-text" >{formik.errors.username}</span>
