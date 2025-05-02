@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Public Sans', sans-serif;
+}
+
+h1,
+button {
+  font-family: 'Sora', sans-serif;
+}
+
+:root {
+  --color-primary: #50F89A;
+  --color-secondary: #005237;
+  --color-accent: #28F490;
+  --color-error: #F44336;
+  --color-text-dark: #222B33;
+  --color-text-light: #3B4752;
+  --color-border: #CFD8E1;
+  --color-background: #F9FAFB;
+}
+
+.left-section {
+  @apply col-span-12 md:col-span-5 bg-white px-4 sm:px-16  pb-16 pt-8 h-full;
+}
+
+.right-section {
+  @apply hidden md:col-span-7 md:flex items-center justify-center overflow-hidden;
+}
+
+.form-section {
+  @apply  space-y-4 md:space-y-8 mt-5 md:mt-10;
+}
+
+.title {
+  @apply font-semibold md:text-6xl text-4xl text-[var(--color-text-dark)] leading-12 md:leading-16 tracking-tight;
+}
+
+.subtitle {
+  @apply font-light text-sm sm:text-lg text-[var(--color-text-light)] leading-7;
+}
+
+.input-label {
+  @apply text-[var(--color-text-dark)] font-medium leading-8;
+}
+
+.input-field {
+  @apply appearance-none font-normal h-10 block w-full bg-[#F9FAFB] text-[var(--color-text-light)] border border-[var(--color-border)] rounded-xs py-2.5 px-3 leading-5 focus:outline-none focus:bg-white focus:border-gray-500;
+}
+
+.error-text {
+  @apply text-[var(--color-error)] text-xs;
+}
+
+.checkbox-label {
+  @apply flex items-center cursor-pointer;
+}
+
+.checkbox {
+  @apply w-5 h-5 accent-[var(--color-accent)] border border-[var(--color-border)] rounded-xs flex items-center justify-center;
+}
+
+.primary-button {
+  @apply flex items-center justify-center w-full cursor-pointer py-3.5 px-2.5 text-sm font-medium text-[var(--color-secondary)] bg-[var(--color-primary)] hover:bg-[var(--color-accent)] rounded-xs border border-[#00E687] focus:outline-none;
+}
+
+.google-button {
+  @apply cursor-pointer w-full py-3.5 px-2.5 text-sm font-medium text-[var(--color-text-light)]  rounded-xs border border-[var(--color-border)] focus:outline-none leading-4 flex items-center justify-center gap-2;
+}
+
+.link-text {
+  @apply text-sm font-medium leading-6 underline cursor-pointer;
+}
+
+.normal-text {
+  @apply text-sm leading-6 text-[var(--color-text-dark)];
+}
+
+.eye-button {
+  @apply absolute right-4 top-11 cursor-pointer w-5 h-5;
+}
